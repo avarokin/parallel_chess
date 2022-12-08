@@ -51,7 +51,6 @@ void print_help() {
   printf("\t'autobot'\tLet computer finish the game.\n");
   printf("\t'%%c%%d%%c%%d'\tFrom-To Coordinate notation.\n");
   printf("\tForsyth-Edwards notation is allowed.\n");
-
   printf("\nType Usage for 't':\n");
   printf("\t0: Serial MinMax Search.\n");
   printf("\t1: Serial MinMax Search with Alpha-Beta Pruning.\n");

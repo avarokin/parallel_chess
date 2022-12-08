@@ -32,9 +32,7 @@ int main (int argc, char** argv) {
 
   if (myrank == 0) {
     if (!global_stats) {
-      printf("Final Project for Parallel Computing.\n");
-      printf("Developed by Team AAA.\n\n");
-      printf("Welcome to chess!\n");
+      printf("\nWelcome to chess!\n");
       printf("Type 'help' for a list of commands.\n");
     }
 

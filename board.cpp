@@ -94,7 +94,7 @@ void generate_sliding_moves(int start, char piece) {
 }
 
 
-// Generate pawn moves. TODO: En Passant & Upgrades
+// Generate pawn moves. TODO: En Passant & Upgrades.
 void generate_pawn_moves(int start, char piece) {
   char cur_color = get_color(piece);
 
@@ -201,11 +201,11 @@ void generate_knight_moves(int idx, char piece) {
   if (numSquaresToEdge[idx][1] >= 2 && numSquaresToEdge[idx][2] >= 1)
     l.push_back(idx + 15);
   
-  // Weast North
+  // Wast North
   if (numSquaresToEdge[idx][2] >= 2 && numSquaresToEdge[idx][0] >= 1)
     l.push_back(idx - 10);
   
-  // Weast South
+  // Wast South
   if (numSquaresToEdge[idx][2] >= 2 && numSquaresToEdge[idx][1] >= 1)
     l.push_back(idx + 6);
 
@@ -285,7 +285,6 @@ bool in_check() {
 
 
 
-
 // Check if proposed move is legal
 bool validate(int start, int target) {
   char piece = b.board[start];
@@ -308,7 +307,7 @@ bool validate(int start, int target) {
   
   if (!in_moves) return false;
 
-  // Check for check(mate)
+  // Check for check(mate).
   bool check = in_check();
   
   int king_pos = 0;
@@ -320,7 +319,7 @@ bool validate(int start, int target) {
     }
   }
   
-  // If i am in check, see if move removes check.
+  // If I am in check, see if move removes check.
   if (check) {
     char p = make_move(start, target);
     if (king_pos == start) {
