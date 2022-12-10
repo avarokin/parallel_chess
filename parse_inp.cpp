@@ -145,7 +145,7 @@ int parse_inp(char* s) {
 
     char cur_color = get_color(b.board[row_from * 8 + col_from]);
 
-    // Validate Move
+    // Validate Move.
     if(!validate(row_from * 8 + col_from,
           row_to * 8 + col_to)) {
       printf("Illegal Move\n");
@@ -163,7 +163,7 @@ int parse_inp(char* s) {
       moves_ctr = 0;
     }
 
-    // Update Layout (FEN Notation)
+    // Update Layout (FEN Notation).
     board_to_fen();
 
   }
